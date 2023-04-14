@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="page-center">
+        <div class="logo-wrpr"><a href="#">Dynamic CSS</a></div>
+      </div>
+    </header>
+    <main>
+      <div class="text-here">
+        <p id="text-container">This is some example text</p>
+      </div>
+      <div class="editor-wrpr">
+        <div class="page-center">
+          <div class="editor-container">
+            <label for="colorbox">Change text color:</label
+            ><input
+              type="text"
+              id="colorbox"
+              placeholder="Enter color code here"
+            />
+            <button id="colorchange">Change Text Color</button><br />
+            <label for="fontsize">Change font size:</label>
+            <input
+              type="range"
+              id="fontsize"
+              value="50"
+              min="10"
+              max="100"
+              oninput="rangevalue.value=value"
+            /><output id="rangevalue">50</output><br />
+            <button id="underline" class="stylebt">Underline</button>
+            <button id="italic" class="stylebt">Italic</button>
+            <button id="bold" class="stylebt">Bold</button><br />
+            <label for="fontsize">Change font family:</label>
+            <select id="list">
+              <option value="serif">Serif</option>
+              <option value="sans-serif">Sans-Serif</option>
+              <option value="monospace">Monospace</option>
+              <option value="cursive">Cursive</option>
+              <option value="fantasy">Fantasy</option></select
+            ><br />
+            <button id="getstyle">Get CSS Properties</button>
+            <p id="css-props"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="page-center">
+        <p>&copy; Copyright 2023 HTML.am</p>
+      </div>
+    </footer>
+  </body>
+  <script src="main.js"></script>
+</html>
